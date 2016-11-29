@@ -13,18 +13,79 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Shaders">
+      <UniqueIdentifier>{4c50bf04-bc98-427d-8459-9d1053ca580e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LoadOBJ.cpp">
+    <ClCompile Include="TerrainGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LoadOBJ.h">
+    <ClInclude Include="Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader.vs">
+      <Filter>Header Files\Shaders</Filter>
+    </None>
+    <None Include="shader.frag">
+      <Filter>Header Files\Shaders</Filter>
+    </None>
+    <None Include="Lamp.frag">
+      <Filter>Header Files\Shaders</Filter>
+    </None>
+    <None Include="Lamp.vs">
+      <Filter>Header Files\Shaders</Filter>
+    </None>
+    <None Include="ModelLoading.vs">
+      <Filter>Header Files\Shaders</Filter>
+    </None>
+    <None Include="ModelLoading.frag">
+      <Filter>Header Files\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="XNotes.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="XPlayer_cpp.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="XMain_cpp.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="xCamera_h.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

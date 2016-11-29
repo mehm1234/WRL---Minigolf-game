@@ -1,0 +1,28 @@
+1#DONE
+2#DONE
+3#DONE
+4#DONE
+5#DONE
+6#Gravity --- Gravity needs to be re-written, right now its based on the distance of the player from the 
+ground which is wrong as the ball falls really fast when its away from the ground but then slows 
+down when it gets closer. 
+
+
+##Michal
+
+The ball needs updated textures but that can be done anytime. Now someone needs to take a look at how we can
+make the ball move, like it would in real life after being hit with a golf club. That can be done in many ways
+but two that comes to my mind are:
+
+1. The value of force can be stored in a club class and then 'transferred' to the ball on collision.
+2. Pressing the button will set the force directly in the ball class which then will be added to velocity.
+We will just add the animation of club swing later on.
+
+First option is more realistic but will require a bit more coding and i guess its unnecessary.
+
+How I think it should work is that when player holds down the space some indicator appears somewhere
+(that can be added later on) and based on the value on the indicator ball 
+should 'be fired' in the same direction as where the camera's looking. 
+
+ 
+
