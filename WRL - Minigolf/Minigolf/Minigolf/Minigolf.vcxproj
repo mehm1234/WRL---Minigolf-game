@@ -43,8 +43,8 @@
     <LibraryPath>C:\Users\Michal\Documents\Visual Studio 2013\Projects\Minigolf\Minigolf\lib-vc2013;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\Michal\Documents\Visual Studio 2015\Projects\Minigolf\Minigolf\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Michal\Documents\Visual Studio 2015\Projects\Minigolf\Minigolf\lib-vc2013;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\Minigolf\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Minigolf\lib-vc2013;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

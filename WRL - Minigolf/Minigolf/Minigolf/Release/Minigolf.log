@@ -15,9 +15,9 @@ SOIL.lib(SOIL.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:I
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  1 of 772 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+  104 of 772 functions (13.5%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    39 functions had inline decision re-evaluated but remain unchanged
+    12 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
 glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\Michal\Documents\GitHub\WRL---Minigolf-game\WRL - Minigolf\Minigolf\Release\vc120.pdb'; linking object as if no debug info
   Minigolf.vcxproj -> C:\Users\Michal\Documents\GitHub\WRL---Minigolf-game\WRL - Minigolf\Minigolf\Release\Minigolf.exe
