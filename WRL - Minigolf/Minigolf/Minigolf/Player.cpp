@@ -5,6 +5,7 @@
 Player::Player()
 {
 	setPosition(0.0f, 0.0f, 0.0f);
+	force = 0.0f;
 }
 
 
@@ -12,18 +13,18 @@ Player::~Player()
 {
 }
 
-void Player::Movement(float dt, int state) {
+void Player::Movement(float dt, int state)
+{
 
 }
 
-void Player::setSpeed(float x) {
+void Player::setSpeed(float x)
+{
 	speed = x;
 }
 
-void Player::Update(float dt) {
-
-	
-
+void Player::Update(float dt) 
+{
 	ApplyGravity();
 
 	dirX = cos((getRotation() + 90) * PI / 180);

@@ -31,12 +31,14 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void Do_Movement();
+void drawHud();
 
 // Camera
 Camera camera(true ,glm::vec3(0.0f, 0.0f, 3.0f));
 bool keys[1024];
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
+bool shoot = true;
 
 GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
@@ -96,7 +98,7 @@ int main()
 		player.setDeltaTime(deltaTime);
 		player.Update(deltaTime);
 		// Clear the colorbuffer
-		glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		shader.Use();   // <-- Don't forget this one!
@@ -143,11 +145,39 @@ void Do_Movement()
 	if (keys[GLFW_KEY_DOWN])
 		player.setSpeed(-4);
 	if (keys[GLFW_KEY_LEFT])
-		player.setRotation(-0.05);
+		player.setRotation(-1.05);
 	if (keys[GLFW_KEY_RIGHT])
-		player.setRotation(0.05);
+		player.setRotation(1.05);
 	if (keys[GLFW_KEY_P])
 		player.setPosition(player.getPosition().x, 15.0f, player.getPosition().z);
+
+	if (keys[GLFW_KEY_SPACE] == GLFW_PRESS)
+	{
+		if (shoot = true)
+		{
+			player.force += 1.0f;
+			if (player.force == 100)
+			{
+				player.force = 0;
+			}
+		}
+		else if(shoot = false)
+		{
+			player.force == 0;
+		}
+	}
+
+	if (keys[GLFW_KEY_SPACE] == GLFW_RELEASE)
+	{
+		player.setSpeed(player.force);
+	}
+
+	while (1)
+	{
+		cout << player.force << "\n";
+		break;
+	}
+	
 
 	// Camera controls
 	/*
