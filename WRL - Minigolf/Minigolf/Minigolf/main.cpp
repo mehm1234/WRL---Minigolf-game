@@ -39,6 +39,7 @@ bool keys[1024];
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
 bool shoot = true;
+bool moving = true;
 
 GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
@@ -169,7 +170,19 @@ void Do_Movement()
 
 	if (keys[GLFW_KEY_SPACE] == GLFW_RELEASE)
 	{
-		player.setSpeed(player.force);
+		//player.setSpeed(player.force);
+
+		if (moving = true)
+		{
+			if (player.force > 0)
+			{
+				player.force -= 1.0f;
+				if (player.force >= 0)
+				{
+					player.setSpeed(player.force);
+				}
+			}
+		}
 	}
 
 	while (1)

@@ -11,10 +11,7 @@ public:
 	~Player();
 	void Update(float dt);
 
-
 	float force;
-	float ballX;
-	float ballZ;
 
 private:
 	float dirX;
