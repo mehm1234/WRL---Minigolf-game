@@ -1,7 +1,7 @@
 #pragma once
 #include <glm\glm.hpp>
 
-#define GRAVITY 9.81f
+#define GRAVITY 19.81f
 
 /* 
 This class is a base for any objects in the game that would have properties such as scale, 
@@ -9,9 +9,17 @@ rotation, position etc. so pretty much anything, do not set any values directly 
 
 */
 
+struct Face { // A struct that contains 3 verticies that together makes a single mesh face
+	glm::vec3 vertex1;
+	glm::vec3 vertex2;
+	glm::vec3 vertex3;
+};
+
 class Actor
 {
 public:
+	
+
 	glm::vec3 getPosition();
 	void setPosition(float x, float y, float z);
 	void UpdatePosition(float x, float y, float z);

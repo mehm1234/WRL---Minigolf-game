@@ -43,10 +43,8 @@ void Actor::CollisionCheck() {
 }
 
 void Actor::ApplyGravity() {
-	if (Position.y > 0.0f) {
 		float gStrenght = Position.y - 0.0f; //calculate the distance from the ground 
-		Velocity.y = -(GRAVITY * gStrenght);
-	}
+		Velocity.y = -(GRAVITY/* * gStrenght*/);
 }
 
 void Actor::setDeltaTime(float x) {

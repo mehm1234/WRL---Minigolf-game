@@ -23,6 +23,14 @@ GLint TextureFromFile(const char* path, string directory);
 class Model
 {
 public:
+	//TEST VARIABLES
+	int NumberOfMeshes;
+	int NumberOfVerticies;
+	int NumberOfFaces;
+	glm::vec3 min_position = { 0.0f, 0.0f, 0.0f }, max_position = { 0.0f, 0.0f, 0.0f };
+
+	vector<glm::vec3> TEST_Indi;
+
 	/*  Functions   */
 	// Constructor, expects a filepath to a 3D model.
 	Model(GLchar* path)
@@ -36,7 +44,7 @@ public:
 		for (GLuint i = 0; i < this->meshes.size(); i++)
 			this->meshes[i].Draw(shader);
 	}
-
+	
 private:
 	/*  Model Data  */
 	vector<Mesh> meshes;
@@ -69,6 +77,7 @@ private:
 		// Process each mesh located at the current node
 		for (GLuint i = 0; i < node->mNumMeshes; i++)
 		{
+			NumberOfMeshes = node->mNumMeshes;
 			// The node object only contains indices to index the actual objects in the scene. 
 			// The scene contains all the data, node is just to keep stuff organized (like relations between nodes).
 			aiMesh* mesh = scene->mMeshes[node->mMeshes[i]];
@@ -81,24 +90,36 @@ private:
 		}
 
 	}
-
+	
 	Mesh processMesh(aiMesh* mesh, const aiScene* scene)
 	{
 		// Data to fill
 		vector<Vertex> vertices;
 		vector<GLuint> indices;
 		vector<Texture> textures;
+		
+		NumberOfVerticies = scene->mMeshes[0]->mNumVertices;//mesh->mNumVertices;
+		NumberOfFaces = mesh->mNumFaces;
 
 		// Walk through each of the mesh's vertices
 		for (GLuint i = 0; i < mesh->mNumVertices; i++)
 		{
+			scene->mMeshes[1]->mNumVertices;
 			Vertex vertex;
 			glm::vec3 vector; // We declare a placeholder vector since assimp uses its own vector class that doesn't directly convert to glm's vec3 class so we transfer the data to this placeholder glm::vec3 first.
 							  // Positions
 			vector.x = mesh->mVertices[i].x;
+			if (mesh->mVertices[i].x < min_position.x) min_position.x = mesh->mVertices[i].x;//look for the minimum x coordinate value - used for box/sphere collision detection
+			if (mesh->mVertices[i].x > max_position.x) max_position.x = mesh->mVertices[i].x;
 			vector.y = mesh->mVertices[i].y;
+			if (mesh->mVertices[i].y < min_position.y) min_position.y = mesh->mVertices[i].y;
+			if (mesh->mVertices[i].y > max_position.y) max_position.y = mesh->mVertices[i].y;
 			vector.z = mesh->mVertices[i].z;
+			if (mesh->mVertices[i].z < min_position.z) min_position.z = mesh->mVertices[i].z;
+			if (mesh->mVertices[i].z > max_position.z) max_position.z = mesh->mVertices[i].z;
+			TEST_Indi.push_back(vector);
 			vertex.Position = vector;
+			
 			// Normals
 			vector.x = mesh->mNormals[i].x;
 			vector.y = mesh->mNormals[i].y;

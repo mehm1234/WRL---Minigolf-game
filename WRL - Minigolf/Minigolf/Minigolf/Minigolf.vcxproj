@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="Actor.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="mathCalc.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Player.h" />
@@ -96,10 +97,7 @@
     <None Include="Shader.vs" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="xCamera_h.txt" />
-    <Text Include="XMain_cpp.txt" />
     <Text Include="XNotes.txt" />
-    <Text Include="XPlayer_cpp.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

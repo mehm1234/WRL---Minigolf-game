@@ -1,24 +1,33 @@
 ﻿  main.cpp
-main.cpp(89): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-main.cpp(146): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(148): warning C4305: 'argument': truncation from 'double' to 'float'
-main.cpp(182): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-main.cpp(183): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-main.cpp(187): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-main.cpp(188): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-main.cpp(190): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-main.cpp(191): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-main.cpp(198): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+main.cpp(155): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+main.cpp(226): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(227): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(236): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(240): warning C4305: 'argument': truncation from 'double' to 'float'
+main.cpp(259): warning C4553: '==': operator has no effect; did you intend '='?
+main.cpp(274): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(275): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+main.cpp(322): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+main.cpp(323): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+main.cpp(327): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+main.cpp(328): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+main.cpp(330): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+main.cpp(331): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+main.cpp(340): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
   GLM: perspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
   GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
 SOIL.lib(SOIL.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
 LINK : warning LNK4098: defaultlib 'MSVCRTD' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
-  104 of 772 functions (13.5%) were compiled, the rest were copied from previous compilation.
+  2 of 852 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    12 functions had inline decision re-evaluated but remain unchanged
+    21 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\Michal\Documents\GitHub\WRL---Minigolf-game\WRL - Minigolf\Minigolf\Release\vc120.pdb'; linking object as if no debug info
-  Minigolf.vcxproj -> C:\Users\Michal\Documents\GitHub\WRL---Minigolf-game\WRL - Minigolf\Minigolf\Release\Minigolf.exe
-  Minigolf.vcxproj -> C:\Users\Michal\Documents\GitHub\WRL---Minigolf-game\WRL - Minigolf\Minigolf\Release\Minigolf.pdb (Full PDB)
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'H:\Wszystko\PROGRAMMING\WRL---Minigolf-game 090217\WRL - Minigolf\Minigolf\Release\vc120.pdb'; linking object as if no debug info
+SOIL.lib(image_DXT.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(image_DXT.obj)' or at 'H:\Wszystko\PROGRAMMING\WRL---Minigolf-game 090217\WRL - Minigolf\Minigolf\Release\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(image_helper.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(image_helper.obj)' or at 'H:\Wszystko\PROGRAMMING\WRL---Minigolf-game 090217\WRL - Minigolf\Minigolf\Release\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(SOIL.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(SOIL.obj)' or at 'H:\Wszystko\PROGRAMMING\WRL---Minigolf-game 090217\WRL - Minigolf\Minigolf\Release\SOIL.pdb'; linking object as if no debug info
+SOIL.lib(stb_image_aug.obj) : warning LNK4099: PDB 'SOIL.pdb' was not found with 'SOIL.lib(stb_image_aug.obj)' or at 'H:\Wszystko\PROGRAMMING\WRL---Minigolf-game 090217\WRL - Minigolf\Minigolf\Release\SOIL.pdb'; linking object as if no debug info
+  Minigolf.vcxproj -> H:\Wszystko\PROGRAMMING\WRL---Minigolf-game 090217\WRL - Minigolf\Minigolf\Release\Minigolf.exe
+  Minigolf.vcxproj -> H:\Wszystko\PROGRAMMING\WRL---Minigolf-game 090217\WRL - Minigolf\Minigolf\Release\Minigolf.pdb (Full PDB)

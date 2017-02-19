@@ -53,6 +53,9 @@
     <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mathCalc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader.vs">
@@ -76,15 +79,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="XNotes.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="XPlayer_cpp.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="XMain_cpp.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="xCamera_h.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
