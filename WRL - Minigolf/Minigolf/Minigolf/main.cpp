@@ -41,12 +41,15 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void Do_Movement();
+void drawHud();
 
 // Camera
 Camera camera(true ,glm::vec3(0.0f, 0.0f, 3.0f));
 bool keys[1024];
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
+bool shoot = true;
+bool moving = true;
 
 int xloop = 0, zloop = 0;
 
@@ -163,7 +166,11 @@ int main()
 		player.CollisionWithGround((VillageModel.max_position.y - 9.2f), ourModel.min_position.y);
 		player.Update(deltaTime);
 		// Clear the colorbuffer
+<<<<<<< HEAD
 		glClearColor(1.0f, 0.00f, 0.00f, 1.0f);
+=======
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+>>>>>>> origin/master
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		shader.Use();   // <-- Don't forget this one!
@@ -219,6 +226,7 @@ int main()
 // Moves/alters the camera positions based on user input
 void Do_Movement()
 {
+<<<<<<< HEAD
 	if (player.getSpeed() <= 0.03) {
 		if (keys[GLFW_KEY_UP])
 		{
@@ -289,6 +297,59 @@ void Do_Movement()
 
 
 	}
+=======
+	if (keys[GLFW_KEY_UP])
+		player.setSpeed(5);
+	if (keys[GLFW_KEY_DOWN])
+		player.setSpeed(-4);
+	if (keys[GLFW_KEY_LEFT])
+		player.setRotation(-1.05);
+	if (keys[GLFW_KEY_RIGHT])
+		player.setRotation(1.05);
+	if (keys[GLFW_KEY_P])
+		player.setPosition(player.getPosition().x, 15.0f, player.getPosition().z);
+
+	if (keys[GLFW_KEY_SPACE] == GLFW_PRESS)
+	{
+		if (shoot = true)
+		{
+			player.force += 1.0f;
+			if (player.force == 100)
+			{
+				player.force = 0;
+			}
+		}
+		else if(shoot = false)
+		{
+			player.force == 0;
+		}
+	}
+
+	if (keys[GLFW_KEY_SPACE] == GLFW_RELEASE)
+	{
+		//player.setSpeed(player.force);
+
+		if (moving = true)
+		{
+			if (player.force > 0)
+			{
+				player.force -= 1.0f;
+				if (player.force >= 0)
+				{
+					player.setSpeed(player.force);
+				}
+			}
+		}
+	}
+
+	while (1)
+	{
+		cout << player.force << "\n";
+		break;
+	}
+	
+
+>>>>>>> origin/master
 	// Camera controls
 	/*
 	if (keys[GLFW_KEY_W])
