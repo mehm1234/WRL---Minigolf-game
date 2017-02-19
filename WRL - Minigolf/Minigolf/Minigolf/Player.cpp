@@ -6,13 +6,8 @@
 
 Player::Player(float x, float y, float z)
 {
-<<<<<<< HEAD
 	setPosition(x, y, z);
 	force = 0;
-=======
-	setPosition(0.0f, 0.0f, 0.0f);
-	force = 0.0f;
->>>>>>> origin/master
 }
 
 
@@ -20,17 +15,14 @@ Player::~Player()
 {
 }
 
-void Player::Movement(float dt, int state)
-{
+void Player::Movement(float dt, int state) {
 
 }
 
-void Player::setSpeed(float x)
-{
+void Player::setSpeed(float x) {
 	speed = x;
 }
 
-<<<<<<< HEAD
 void Player::setDirX(float X) {
 	dirX = X;
 }
@@ -44,11 +36,6 @@ void Player::CollisionWithGround(float maxTerrainY, float minBallY) {
 		ApplyGravity();
 	}
 }
-=======
-void Player::Update(float dt) 
-{
-	ApplyGravity();
->>>>>>> origin/master
 
 Face Player::CollisionWithWalls(Face Face, bool WallToTheRight) {
 	highestZ = -923188371; // Set to enourmouse values because we dont know what coordinates the model verticies will be.

@@ -15,15 +15,9 @@ public:
 	Player(float x, float y, float z);
 	~Player();
 	void Update(float dt);
-<<<<<<< HEAD
 	void CollisionWithGround(float maxTerrainY, float minBallY);
 	Face CollisionWithWalls(Face x, bool WallToTheRight);
 	float force;
-=======
-
-	float force;
-
->>>>>>> origin/master
 private:
 	float dirX;
 	float dirZ;
