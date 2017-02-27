@@ -1,0 +1,15 @@
+if (gamestate == 0)
+		{
+			if (keys[GLFW_KEY_ENTER])
+			{
+			gamestate = 1;
+
+			}
+
+		}
+
+
+		if (gamestate == 1)
+		{
+    
+   
